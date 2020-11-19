@@ -1,0 +1,11 @@
+RewriteEngine On
+RewriteBase /
+RewriteRule ^index\.html?$ / [NC,R,L]
+AddType application/x-httpd-php .html
+AddType application/x-httpd-php .htm
+Options -Indexes
+ErrorDocument 400 /errors/badrequest.php
+ErrorDocument 401 /errors/authreqd.php
+ErrorDocument 403 /errors/forbid.php
+ErrorDocument 404 /errors/not_found.php
+ErrorDocument 500 /errors/serve_err.php

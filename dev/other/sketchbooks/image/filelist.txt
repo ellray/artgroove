@@ -1,0 +1,9 @@
+sketch_book_1-1.jpg|Sketch book #1, sample page #1
+sketch_book_1-2.jpg|Sketch book #1, sample page #2
+sketch_book_1-3.jpg|Sketch book #1, sample page #3
+sketch_book_1-4.jpg|Sketch book #1, sample page #4
+sketch_book_2-1.jpg|Sketch book #2, sample page #1
+sketch_book_2-2.jpg|Sketch book #2, sample page #2
+sketch_book_2-3.jpg|Sketch book #2, sample page #3
+sketch_book_2-4.jpg|Sketch book #2, sample page #4
+sketch_book_2-5.jpg|Sketch book #2, sample page #5

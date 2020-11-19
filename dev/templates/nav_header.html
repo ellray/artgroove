@@ -1,0 +1,56 @@
+<?php include_once("analyticstracking.php") ?>
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = 'https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v3.1&appId=390024227786580&autoLogAppEvents=1';
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+<div id="header">
+	<p class="header1"><a href="/index.php">artgroove.com</a></p>
+	<p class="header2">the art of Carolyn Ellingson</p>
+</div>
+<div id="content">
+	<div id="nav_container">
+		<nav>
+			<ul>
+				<li>
+					<a href="<?php echo $ROOT ?>/" id="home_link">home</a>
+				</li>
+				<li>
+					<a href="<?php echo $ROOT ?>/Gallery">see the art!</a>
+				</li>
+				<li>
+					<a href="<?php echo $ROOT ?>/Artist">artist</a>
+				</li>
+				<li>
+					<a href="<?php echo $ROOT ?>/Newsletter">newsletter</a>
+				</li>
+				<li>
+					<a href="<?php echo $ROOT ?>/Subscribe">subscribe</a>
+				</li>
+				<li>
+					<a href="<?php echo $ROOT ?>/Sales">sale of art</a>
+				</li>
+				<li>
+					<a href="<?php echo $ROOT ?>/Studio">studio</a>
+				</li>
+				<li>
+					<a href="<?php echo $ROOT ?>/FAQ">faq</a>
+				</li>
+				<li>
+					<a href="<?php echo $ROOT ?>/MoreArtists">more artists</a>
+				</li>
+				<li>
+					<a href="<?php echo $ROOT ?>/AboutUs">about us</a>
+				</li>
+				<li>
+					<a href="<?php echo $ROOT ?>/Contact">contact</a>
+				</li>
+			</ul>
+		</nav>
+	</div><!-- end nav_container -->
+
+
+

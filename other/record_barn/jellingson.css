@@ -1,0 +1,252 @@
+/* jellingson.css
+   Jeff Ellingson
+   CIS230 Website CSS
+   24-Sep-2010
+*/
+
+html {margin: 0; padding: 0; background-color: #e95;}
+body {
+  margin: 0 0px 0 5px; 
+  min-width: 1050px;
+  font-family: georgia,"times new roman",serif;
+}
+/* no underlined links! */
+a {text-decoration: none; font-weight: 700;}
+img {border: none;}
+.logo {
+  float: left;
+  margin: 10px 5px 0 5px;
+}
+ul {list-style-type: none;}
+#masthead, #footer {
+  width: 100%;
+} 
+h1 {
+  margin: 0;
+  padding: 0;
+  font-size: 400%;
+}
+h2 {
+  font-size: 150%;
+}
+h3, h4 {
+  margin-bottom: 2px;
+}
+input {margin: 5px;}
+label {width: 100px;}
+.checkbox_list {width: 130px; height: 120px; float: left;}
+#masthead {
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-top: 0;
+  padding-bottom: 0;
+  background-color: #e95;
+  height: 200px;
+  min-width: 750px;
+}
+#masthead, #footer, #right_bar {
+  overflow: hidden;
+}
+
+/* common height for "center band" of page */
+#left_bar, #content, #right_bar, #alt_content, #content_section,
+#form_section, #article_section {
+  margin-top: -5px;
+  padding-top: 0;
+  float: left;
+  height: 700px;
+  border-width: 2px 0 2px 0;
+  border-style: solid none solid none;
+  border-color: #444;
+}
+#right_bar {
+  width: 25%;
+  min-width: 240px;
+  background-color: #58d;
+}
+.ad_img {
+  display: block;
+  margin: 7%;
+  margin-right: auto;
+  margin-left: auto;
+  width: 240px;
+}
+#content, #alt_content, #form_section {
+  width: 50%;
+  min-width: 540px;
+  background-color: #eee;
+  padding: 0 20px 0 20px;
+  overflow: auto;
+}
+#content_section, #article_section {
+    /* the articles page content runs to the right side of the page */
+    float: left;
+    width: 80%;
+    min-width: 700px;
+    overflow: auto;
+}
+#content_section { background-color: #cde; }
+#article_section { background-color: #ff8; }
+#form_section {
+    background-color: #acf;
+    overflow: auto;
+}
+#alt_content {background-color: #fc9;}
+input, textarea, select {
+    background-color: #fff;
+}
+#left_bar {
+  background-color: #58d;
+  width: 200px;
+}
+/* vertical, "drop-down" menu system */
+#menu {
+  width: 150px;
+  font-family: "trajan pro", Georgia, serif;
+  font-weight: 700;
+  text-align: left;
+  font-size: 90%;
+  margin: 40px auto 0px auto;
+  padding: 20px
+}
+#menu ul {
+  background-color: #117;
+  margin: 0;
+  padding: 0;
+}
+#menu ul li {
+  height:25px;
+  line-height:25px;
+  list-style: none;
+  border: 1px solid #9cf;
+}
+#menu a {
+  padding-left:10px;
+  display: block;
+  color: #fff;
+}
+#menu ul li:hover {
+  background-color: #eaa;
+  color: #000;
+  position: relative;
+}
+#menu ul li a:hover {color: #000;}
+#menu ul ul {display: none; position: absolute; left: 147px; top: 0px;}
+#menu ul li:hover ul { display: block;}
+#menu ul ul li {width: 160px; float: left; display: inline;}
+#menu li:hover ul li ul {display: none; position: absolute; left: 160px; top: 0px;}
+#menu ul ul li:hover ul {display: block;}
+#menu ul ul ul li {width: 160px; float: left; display: inline; background-color: #117;}
+/* current page highlighted in menu... */
+#menu .current_link {background-color: #ddd; color: #000;}
+#footer {
+  clear: both;
+  width: 100%;
+  background-color: #e95;
+  /*height: 40px;*/
+}
+#footer_links  li{
+  font-size: 80%;
+  font-weight: 700;
+  font-family: "trajan pro", Georgia, serif;
+  text-transform: uppercase;
+  display: inline;
+  padding-right: 20px;
+}  
+#footer_links a {color: #000;}
+#footer_links a:hover {color: #fff;}
+#footer_links a:active{color: #f44;}
+#store_title {
+  background-color: #fc9;
+  font-size: 400%;
+  letter-spacing: -2px;
+  font-family: "trajan pro", Georgia, serif;
+  /* redundant, since Trajan Pro is all-caps, but leave it
+  in case we change the font */
+  text-transform: capitalize;
+  float: left;
+  width: 550px;
+  clear: right;
+  margin: 10px 25px 0 20px;
+  padding: 20px;
+  text-align: center;
+  border: 2px inset #e95;
+}
+#subtitle_h2 {
+  margin: 0 0 0 10%;
+  float: left;
+  padding: 5px; 
+  font-weight: 700;
+  font-family: "comic sans", Arial, sans-serif; 
+  font-style: italic;
+}
+#map {width: 525px; height: 450px;}
+#dead_link {background-color: #f88;}
+#site_map {background-color: #eee;}
+#site_map a:hover {color: #f00;}
+#hours {float: left; background-color: #9cf;}
+#link_table {padding: 50px; overflow: auto;}
+.link_box {float: left; width: 150px;}
+.caption {display: block; font-size: 90%; font-family: Verdana, sans-serif; width: 110px;}
+.title {font-style: italic; font-weight: 700;}
+.book_image {float:left; height: 250px; margin: 10px;}
+.right_float {float: right;}
+.left_float {float: left;}
+.left_indent {margin-left: 35px;}
+.bold {font-weight: 700;}
+.clean {font-family: Verdana, Arial, sans-serif;}
+.large_clean {font-family: Verdana, Arial, sans-serif; font-size: 120%;}
+.smaller {font-size: 80%;}
+.boxed {border: 2px solid #117; text-align: left; padding: 8px; margin: 5px;}
+.policy {
+  font-weight: 700;
+}
+.list_title {
+  font-size: 120%;
+}
+#exclusion_list {
+/*  margin-top: 0;*/
+  list-style-type: disc;
+}
+.small_cal table, th, td {
+    border: 2px solid black;
+    border-collapse: collapse;
+}
+.small_cal th {
+    background-color: #eb9;
+}
+.small_cal td {
+    border: 1px solid black;
+    text-align: center;
+    width: 2em;
+    height: 2em;
+    background-color: #fda;
+}
+.lg_cal table, th, td {
+    border: 2px solid black;
+    border-collapse: collapse;
+}
+.lg_cal th {
+    background-color: #eb9;
+    font-size: 2em;
+}
+.lg_cal td {
+    border: 1px solid black;
+    text-align: center;
+    font-size: 1.5em;
+    width: 4em;
+    height: 3em;
+    background-color: #fda;
+}
+.my_table td {
+    border-width: 1px;
+}
+.my_table {
+
+    border-spacing: 0;
+    border-collapse: collapse;
+}
+.err {
+    color: #f00;
+    font-weight: 700;
+}

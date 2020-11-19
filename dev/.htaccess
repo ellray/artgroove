@@ -1,0 +1,68 @@
+# do not allow anyone else to read your .htaccess file
+<Files .htaccess>
+deny from all
+</Files>
+
+# forbid viewing of directories
+Options All -Indexes
+
+# disable the server signature- helps with preformance
+ServerSignature Off
+
+RewriteEngine On
+RewriteBase /
+
+RewriteCond %{HTTPS} !=on
+RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+RewriteCond %{SERVER_PORT} 80
+RewriteRule ^(.*)$ https://artgroove.com/$1 [R=301,L]
+RewriteCond %{HTTP_HOST} ^www\.artgroove\.com [NC]
+RewriteRule (.*) https://%{HTTP_HOST}%{REQUEST_URI}
+
+RewriteCond %{HTTP_HOST} ^www\.(.*)$ [NC]
+RewriteRule ^(.*)$ http://%1%{REQUEST_URI} [R=301,QSA,NC,L]
+
+# drop extension from the urls
+RewriteRule ^artist/?$     	dev/artist.php    	[NC,L]    
+RewriteRule ^gallery/?$    	dev/gallery.php    	[NC,L]
+RewriteRule ^newsletter/?$ 	dev/newsletter.php	[NC,L]  
+RewriteRule ^sales/?$		dev/sales.php		[NC,L]  
+RewriteRule ^subscribe/?$	dev/subscribe.php 	[NC,L]  
+RewriteRule ^contact/?$    	dev/contact.php    	[NC,L]  
+RewriteRule ^studio/?$    	dev/studio.php    	[NC,L]
+RewriteRule ^moreartists/?$ dev/moreartists.php [NC,L]
+RewriteRule ^aboutus/?$    	dev/about-us.php    [NC,L]
+RewriteRule ^faq/?$    		dev/faq.php    		[NC,L]
+RewriteRule ^privacy$    	dev/privacy.php    	[NC,L]
+RewriteRule ^obituary$    	dev/obituary.php    [NC,L]
+RewriteRule ^bio$    		dev/artistbio.php   [NC,L]
+RewriteRule ^ExchangePolicy$ dev/exchange.php   [NC,L]
+RewriteRule ^RefundPolicy$  dev/refund.php   	[NC,L]
+RewriteRule ^FeministaInterview$  dev/interview.php   	[NC,L]
+RewriteRule ^BillBateman$  	dev/bateman.php   	[NC,L]
+
+# more artists rules
+RewriteRule ^BatesPolandBates 	dev/moreartists/bates.php	[NC,L]
+RewriteRule ^EstelleAkamine 	dev/moreartists/akamine.php	[NC,L]
+RewriteRule ^RuthKolmanBrophy 	dev/moreartists/brophy.php	[NC,L]
+RewriteRule ^SantieHuckaby 		dev/moreartists/huckaby.php	[NC,L]
+RewriteRule ^PeggyHuff 			dev/moreartists/huff.php	[NC,L]
+RewriteRule ^DonaldClegg 		dev/moreartists/clegg.php	[NC,L]
+RewriteRule ^ClaudiaKussano 	dev/moreartists/kussano.php	[NC,L]
+RewriteRule ^JohnPatton 		dev/moreartists/patton.php	[NC,L]
+RewriteRule ^ToruSugita 		dev/moreartists/sugita.php	[NC,L]
+RewriteRule ^PatWilson 			dev/moreartists/wilson.php	[NC,L]
+
+# add art title to large image display URL
+RewriteRule ^art/([0-9]+)/.*/?$    dev/php/display-art.php?id=$1   [NC,L,QSA]
+
+# similar rule for 'for-sale' query page
+RewriteRule ^ArtForSalePage([0-9]+)$    dev/php/for-sale.php?page=$1&forsale=1   [NC,L,QSA]
+
+AddType application/x-httpd-php .html
+AddType application/x-httpd-php .htm
+ErrorDocument 400 /errors/badrequest.php
+ErrorDocument 401 /errors/authreqd.php
+ErrorDocument 403 /errors/forbid.php
+ErrorDocument 404 /errors/not_found.php
+ErrorDocument 500 /errors/serve_err.php
